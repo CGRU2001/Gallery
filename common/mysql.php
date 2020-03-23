@@ -4,5 +4,8 @@
         mysqli_set_charset($conn,$config['encoding']);
         return $conn;
     }
-
+    function Execute($sql, $conn){
+        $return = mysqli_query($conn, $sql);
+        return ($return);
+    }
 ?>
